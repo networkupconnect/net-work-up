@@ -76,7 +76,7 @@ export default function NotificationBell() {
       {/* Bell button */}
       <button onClick={() => { setOpen(p => !p); if (!open) markAllRead(); }}
         className="relative w-9 h-9 flex items-center justify-center rounded-full hover:bg-gray-100 transition-all">
-        <span className="text-xl">🔔</span>
+        <span className="text-xl"><img src="/images/noti.svg" alt="notifications" /></span>
         {unread > 0 && (
           <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold">
             {unread > 9 ? "9+" : unread}
@@ -99,7 +99,7 @@ export default function NotificationBell() {
           <div className="max-h-80 overflow-y-auto">
             {notifications.length === 0 ? (
               <div className="text-center py-10">
-                <p className="text-3xl mb-2">🔔</p>
+                <p className="text-3xl mb-2"><img src="/images/noti.svg" alt="notifications" /></p>
                 <p className="text-gray-400 text-sm">No notifications yet</p>
               </div>
             ) : (
