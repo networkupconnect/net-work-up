@@ -1,0 +1,16 @@
+@import "tailwindcss";
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+@layer utilities {
+  /* Scrollbar hide karne ke liye */
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari and Opera */
+  }
+}
